@@ -1,2 +1,2 @@
 # Sun-Training
-Sun exercise
+Sun exercise2
