@@ -1,0 +1,66 @@
+@import '../base/mixins';
+section.introduction {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    #carouselExampleIndicators {
+        width: 100%;
+        height: 100%;
+        .carousel-indicators {
+            bottom: 5%;
+        }
+        .carousel-inner {
+            height: 100%;
+            .carousel-item {
+                height: 100%;
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    filter: grayscale(0.3);
+                }
+            }
+        }
+    }
+    .introduction-content {
+        z-index: 2;
+        width: 50%;
+        @include translate(50%, 50%, -50%, -50%);
+        .introduction__title {
+            font-size: 4.8rem;
+            font-family: $secondary-font;
+            span {
+                color: $primary-color;
+            }
+        }
+        .introduction__des {
+            span {
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+            }
+        }
+        .introduction__btn-group {
+            width: calc(50% + 2rem);
+            margin: 0 auto;
+            a {
+                margin-top: 1rem;
+            }
+        }
+        @media (max-width: 575.98px) {
+            width: 80%;
+            .introduction__btn-group {
+                width: fit-content;
+                a {
+                    width: 100%;
+                }
+            }
+        }
+        @media (max-width: 991.98px) {
+            .introduction__btn-group {
+                width: fit-content;
+                a {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

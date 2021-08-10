@@ -1,0 +1,19 @@
+header(class="header fixed-top position-fixed")
+    .container
+        nav(class="header__navbar navbar navbar-expand-lg py-4 navbar-dark justify-content-between align-items-center")
+            a(class="navbar-brand text-white", href="index.html")
+                h1.header__brand Delicious
+            button(class="navbar-toggler", type="button", data-toggle="collapse", data-target="#header__navbar-tablet-icon", aria-controls="header__navbar-tablet-icon" aria-expanded="false", aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+            div(class="collapse navbar-collapse header__navigation-menu flex-grow-0", id="header__navbar-tablet-icon")
+                ul(class="navbar-nav align-items-center justify-content-between")
+                    +navbarItem("index.html" ,"Home", true, false)
+                    +navbarItem("#about" ,"About", false, false)
+                    +navbarItem("#menu" ,"Menu", false, false)
+                    +navbarItem("#special" ,"Specials", false, false)
+                    +navbarItem("#event" ,"Events", false, false)
+                    +navbarItem("#gallery" ,"Galerry", false, false)
+                    +navbarItem("index.html" ,"Dropdown", false, true)
+                    +navbarItem("#contact" ,"Contact", false, false)
+                    +navbarItem("#booktable" ,"Book a table", false, false, true)
+                    

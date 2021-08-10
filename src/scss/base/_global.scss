@@ -1,0 +1,17 @@
+.section__title {
+    width: fit-content;
+    margin: 0 auto;
+    h2 {
+        font-size: 3.2rem;
+        font-family: $secondary-font;
+        font-weight: bold;
+        span {
+            color: $primary-color;
+        }
+    }
+}
+
+.section__des {
+    color: $secondary-color;
+    font-size: 1.5rem;
+}

@@ -1,0 +1,49 @@
+@import '../base/mixins';
+section.about-us {
+    background-color: $primary-color-light;
+    .about-us__video {
+        min-height: 45rem;
+        height: 100%;
+        background-image: url(../../images/about.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        .watch-video__icon {
+            font-size: 10rem;
+            color: $primary-color;
+            @include translate(50%, 50%, -50%, -50%);
+            cursor: pointer;
+        }
+    }
+    .about-us__content {
+        h2 {
+            font-size: 3.4rem;
+            font-family: $secondary-font;
+            color: $secondary-color;
+            strong {
+                font-weight: bold;
+            }
+        }
+        .content__des {
+            font-size: 1.5rem;
+            color: $third-color;
+            i {
+                font-style: italic;
+            }
+        }
+        .content__question-list {
+            .content__question-item {
+                line-height: 1.8rem;
+                color: $secondary-color;
+                font-size: 1.5rem;
+                i {
+                    color: $primary-color;
+                }
+            }
+        }
+        .content__footer {
+            color: $third-color;
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+        }
+    }
+}

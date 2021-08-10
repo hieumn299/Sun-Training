@@ -1,0 +1,8 @@
+@import '../base/mixins';
+input {
+    @include input();
+}
+
+textarea {
+    @include textarea();
+}

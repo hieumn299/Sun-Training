@@ -1,0 +1,36 @@
+footer.footer {
+    background-color: $dark-gray-color;
+    .section__des {
+        color: white;
+    }
+    .social-list {
+        .social-item {
+            font-size: 1.6rem;
+            width: 4.4rem;
+            height: 4.4rem;
+            background-color: $secondary-color;
+            transition: 0.5s;
+            cursor: pointer;
+            &:hover {
+                background-color: $primary-color;
+                transition: 0.5s;
+            }
+            &:hover i {
+                color: white;
+                transition: 0.5s;
+            }
+            i {
+                transition: 0.5s;
+            }
+        }
+    }
+    span.copy-right {
+        font-size: 1.4rem;
+    }
+    div.design-by {
+        font-size: 1.4rem;
+        span {
+            color: $primary-color;
+        }
+    }
+}

@@ -1,0 +1,144 @@
+mixin dropdownItem()
+    a(class="dropdown-item py-3", href="#")='Action 1'
+
+mixin navbarItem(href="index.html", content="Home", isActive, isDropdown, isButton)
+    if(isActive)
+        li(class="nav-item active pl-4")
+            a(class="nav-link text-white" href=href)=content
+    else if(isDropdown)
+        li(class="nav-item dropdown pl-4")
+            a(class="nav-link text-white dropdown-toggle", href="#", id="tabletDropdown", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")="Dropdown"
+            div(class="dropdown-menu", aria-labelledby="tabletDropdown")
+                +dropdownItem
+                +dropdownItem
+                +dropdownItem 
+    else if(isButton)
+        li(class="nav-item pl-4")
+            a(class="btn rounded-pill btn-fill", href=href)=content    
+    else
+        li(class="nav-item pl-4")
+            a(class="nav-link text-white" href=href)=content
+
+mixin introductionContent(haveSpanTitle, title="Hiếu Nguyễn", titleColor="Minh Hiếu", description="Hiếu Hiếu")
+    .introduction__title
+        h2.text-white
+            if(haveSpanTitle)
+                span=titleColor  
+                =title
+            else
+                =title
+    div(class="introduction__des mt-4")
+        span(class="text-center text-white")=description
+    div(class="introduction__btn-group mt-4 d-flex justify-content-between align-items-center flex-wrap")
+        a(class="btn btn-transparent rounded-pill", href="") OUT MENU
+        a(class="btn btn-transparent rounded-pill", href="") BOOK A TABLE
+
+mixin aboutUsQuestionItem(content="Hiếu")
+    li(class="content__question-item py-3")
+        i(class="fas fa-check d-inline-block mr-3")
+        =content
+
+mixin sectionTitle(title="Why choose", titleColor=" Our Restaurant", haveDescription, desContent="Hiếu")
+    .section__title 
+        h2=title
+            span=titleColor
+    if(haveDescription)
+        div(class="section__des mt-3 text-center")
+            span=desContent
+
+mixin whyChooseItem(number="01", title="Lorem Ipsum", description="Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat")
+    div(class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 py-3")
+        div(class="why-choose__item p-5")
+            div(class="item__number d-block")=number
+            div(class="item__title mt-3")
+                h3=title
+            div(class="item__des mt-4")
+                span=description
+
+mixin menuNavItem(isActive, content="Hiếu nè", href="index.html")
+    if(isActive)
+        a(class="d-inline-block active btn btn-outline rounded-pill mt-3", href=href)=content 
+    else
+        a(class="d-inline-block btn btn-outline rounded-pill mt-3", href=href)=content
+
+mixin menuItem(name="Lobster Bisque", price="5.95", des="Lorem, deren, trataro, filede, nerada", href="index.html")
+    li(class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 py-4")
+        div(class="menu-item overflow-hidden")
+            div(class="item__name-price position-relative d-flex justify-content-between align-items-center")
+                a(class="menu-item__link d-block pr-3 position-relative bg-white", href=href)=name
+                span(class="bg-white position-relative menu-item__price")="$"+price
+            em(class="menu-item__des mt-2 d-block")=des 
+
+mixin specialMenuTabList(isActive=false, id="modi-sit-est", href="modi-sit-est__list", controls="modi-sit-est", content="Modi sit est")
+    if(isActive)
+        a(class="list-group-item py-4 list-group-item-action active", id=id, data-toggle="list", href="#"+href, role="tab", controls=controls)=content
+    else 
+        a(class="list-group-item py-4 list-group-item-action", id=id, data-toggle="list", href="#"+href, role="tab", controls=controls)=content
+
+mixin specialMenuTabContent(isActive=false, title="Architecto ut aperiam autem id", des="Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka", detail="Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero",id="modi-sit-est__list",labelledby="modi-sit-est",url="specials-1.jpg")
+    if(isActive)
+        div(class="tab-pane fade show active", id=id, role="tabpanel",  aria-labelledby=labelledby)
+            .row
+                div(class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8")
+                    h2(class="tab-content__title")=title
+                    span(class="d-block tab-content__des mt-4")=des
+                    p(class="tab-content__detail mt-4")=detail
+                div(class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4")
+                    div(class="tab-content__img w-100")
+                        img(src="images/"+url, alt=url, class="rounded-circle w-100")
+    else
+        div(class="tab-pane fade", id=id, role="tabpanel",  aria-labelledby=labelledby)    
+            .row
+                div(class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8")
+                    h2(class="tab-content__title")=title
+                    span(class="d-block tab-content__des mt-4")=des
+                    p(class="tab-content__detail mt-4")=detail
+                div(class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4")
+                    div(class="tab-content__img w-100")
+                        img(src="images/"+url, alt=url, class="rounded-circle w-100")
+
+mixin questionItem(question)
+    li(class="question-item py-4")
+        i(class="far fa-check-circle mr-3")
+        span(class="text-white")=question
+
+mixin carouselItem(url="event-1.jpg", title="Birthday Parties", price="189", des="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", question1="Ullamco laboris nisi ut aliquip ex ea commodo consequat.", question2="Duis aute irure dolor in reprehenderit in voluptate velit.", question3="Ullamco laboris nisi ut aliquip ex ea commodo consequat.",detail="Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur")
+    div(class="row")
+        div(class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6")
+            div(class="carousel-item__img p-4")
+                img(src="./images/"+url, alt=url class="w-100")
+        div(class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6")
+            div(class="carousel-item__content p-4")
+                h2(class="carousel-item__title")=title 
+                span(class="d-block mt-3 carousel-item__price text-white")="$"+price 
+                span(class="d-block mt-4 carousel-item__des text-white")=des 
+                ul(class="question-list mt-3")
+                    +questionItem(question1)
+                    +questionItem(question2)
+                    +questionItem(question3)
+                span(class="d-block mt-3 text-white carousel-item__detail")=detail
+
+mixin galleryItem(url="gallery-1.jpg",href="index.html")
+    div(class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3")
+        div(class="galley-item mt-4")
+            a(href=href)
+                img(src="images/"+url, alt=url, class="img-fluid") 
+
+mixin contactInfoItem(icon="icon",title="title",info1="info",info2="info")
+    div(class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3")
+        div(class="d-flex align-items-center mt-4")
+            div(class="bg-icon")
+                i(class="d-flex justify-content-center align-items-center rounded-circle mr-3 "+icon)
+            div(class="info__content")
+                h2=title
+                address(class="mt-3")
+                    span(class="d-block")=info1
+                    span(class="d-block")=info2
+
+mixin footerSocialItem(icon)
+    li(class="bg-icon mt-4 social-item d-flex justify-content-center align-items-center rounded-circle mr-3")
+        i(class="d-flex justify-content-center align-items-center text-white "+icon)
+
+mixin input(inputType="text", placeholder="Your Name", name="name", col="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6", padding="py-4")
+    div(class=col+" "+padding)
+        input(type=inputType, class="form-control", placeholder=placeholder, name=name)

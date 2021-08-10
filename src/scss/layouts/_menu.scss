@@ -1,0 +1,45 @@
+@import '../base/mixins';
+section.menu {
+    .menu__nav-list {
+        width: 100%;
+        max-width: 50rem;
+        a {
+            min-width: 10.5rem;
+        }
+    }
+    li {
+        .menu-item {
+            .item__name-price {
+                font-size: 1.6rem;
+                font-weight: 600;
+                line-height: 1.6rem;
+                a.menu-item__link {
+                    font-size: 1.6rem;
+                    color: $primary-color;
+                    font-weight: bold;
+                    z-index: 2;
+                }
+                span {
+                    padding: 0 1rem;
+                    position: relative;
+                    z-index: 2;
+                }
+                &::after {
+                    content: '.................................................................................................................................................................................................................................................................';
+                    position: absolute;
+                    z-index: 1;
+                    // height: 0.3rem;
+                    color: $third-color;
+                    font-family: Arial, Helvetica, sans-serif;
+                    right: 0;
+                    top: -3px;
+                }
+            }
+            &__des {
+                font-size: 1.3rem;
+                color: $third-color;
+                font-style: italic;
+            }
+        }
+    }
+}

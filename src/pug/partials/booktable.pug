@@ -1,0 +1,15 @@
+section(class="py-5 book-table", id="booktable")
+    .container 
+        +sectionTitle("Book a"," Table", true,"Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.")
+        form(class="book-table-form p-4 mt-5")
+            .form-row
+                +input("text","Your Name","name","col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4","px-5 py-4")
+                +input("email","Your Email","email","col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4","px-5 py-4")
+                +input("tel","Your Phone","phone","col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4","px-5 py-4")
+                +input("text","Date","date","col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4","px-5 py-4")
+                +input("text","Time","time","col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4","px-5 py-4")
+                +input("text","# of people","amount","col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4","px-5 py-4")
+                div(class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 px-5 py-4")
+                    textarea(name="message", cols="30", rows="10") 
+                div(class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 px-5 py-4 text-center")
+                    a(href="index.html", class="btn btn-fill rounded-pill") Send Message 

@@ -1,0 +1,20 @@
+section(class="introduction", id="introduction")
+    div(id="carouselExampleIndicators", class="carousel slide", data-ride="carousel")
+        ol.carousel-indicators
+            li(data-target="#carouselExampleIndicators", data-slide-to="0", class="active")
+            li(data-target="#carouselExampleIndicators", data-slide-to="1")
+            li(data-target="#carouselExampleIndicators", data-slide-to="2")
+        .carousel-inner
+            div(class="carousel-item active")
+                img(src="./images/slide-1.jpg", class="d-block w-100", alt="...")
+                div(class="introduction-content text-center")
+                    +introductionContent(true," Restaurant", "Delicious", "Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.")
+            div(class="carousel-item")
+                img(src="./images/slide-2.jpg", class="d-block w-100", alt="...")
+                div(class="introduction-content text-center")
+                    +introductionContent(false,"Sequi ea ut et est quaerat", "Delicious", "Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.")
+            div(class="carousel-item")
+                img(src="./images/slide-3.jpg", class="d-block w-100", alt="...")
+                div(class="introduction-content text-center")
+                    +introductionContent(false," Restaurant", "Delicious", "Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.")
+    

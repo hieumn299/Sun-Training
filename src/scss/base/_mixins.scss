@@ -1,0 +1,31 @@
+@mixin button ($color, $bg-color, $color-border) {
+    color: $color;
+    background-color: $bg-color;
+    border-color: $color-border;
+}
+
+@mixin translate($left, $top, $x, $y) {
+    position: absolute;
+    left: $left;
+    top: $top;
+    transform: translate($x, $y);
+}
+
+@mixin input($height:4.4rem, $fontSize:1.6rem, $fontSizePlaceHod:1.6rem, $lineHeight:1.6rem) {
+    height: $height !important;
+    font-size: $fontSize !important;
+    &::placeholder {
+        font-size: $fontSizePlaceHod !important;
+        line-height: $lineHeight !important;
+    }
+}
+
+@mixin textarea($fontSize:1.6rem, $padding:1rem) {
+    width: 100% !important;
+    font-size: $fontSize !important;
+    border-color: rgba(128, 128, 128, 0.377) !important;
+    padding: $padding !important;
+    &:focus {
+        outline: none !important;
+    }
+}

@@ -1,0 +1,22 @@
+section(class="py-5 contact", id="contact")
+    .container 
+        +sectionTitle("Contact"," Us", true,"Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.")
+        div(class="py-5 mt-5 contact__map")
+            div(id="map", class="w-100")
+                iframe(class="w-100", src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.106899488615!2d108.2075535148077!3d16.059941588886673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219b4239d8e51%3A0x96e408c6b0419760!2sDuy%20Tan%20University!5e0!3m2!1sen!2s!4v1627893716090!5m2!1sen!2s", height="400px", style="border:0;", allowfullscreen="", loading="lazy")
+        div(class="contact-info p-5")
+            div(class="row")
+                +contactInfoItem("fas fa-map-marker-alt","Location:","A108 Adam Street","New York, NY 535022")   
+                +contactInfoItem("far fa-clock","Open Hours:","Monday-Saturday:","11:00 AM - 2300 PM") 
+                +contactInfoItem("far fa-envelope","Email:","info@example.com","contact@example.com") 
+                +contactInfoItem("fas fa-mobile-alt","Call:","+1 5589 55488 51","+1 5589 22475 14")
+        div(class="contact-form")
+            form(class="book-table-form")
+                .form-row
+                    +input()
+                    +input("email","Your Email","email")
+                    +input("text","Subject","subject","col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12")
+                    div(class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 py-4")
+                        textarea(name="message", cols="30", rows="10",class="w-100") 
+                    div(class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 py-4 text-center")
+                        a(href="index.html", class="btn btn-fill rounded-pill") Send Message 

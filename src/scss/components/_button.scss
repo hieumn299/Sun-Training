@@ -1,0 +1,37 @@
+@import '../base/mixins';
+.btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.3rem;
+    white-space: nowrap;
+}
+
+.btn-fill {
+    @include button(white, $primary-color, $primary-color);
+    transition: 0.5s;
+    &:hover {
+        @include button($primary-color, white, $primary-color);
+        transition: 0.5s;
+    }
+}
+
+.btn-outline.active {
+    @include button(white, $primary-color, $primary-color);
+}
+
+.btn-outline {
+    @include button(black, white, $primary-color);
+    transition: 0.5s;
+    &:hover {
+        @include button(white, $primary-color, $primary-color);
+        transition: 0.5s;
+    }
+}
+
+.btn-transparent {
+    @include button(white, transparent, $primary-color);
+    transition: 0.5s;
+    &:hover {
+        @include button(white, $primary-color, $primary-color);
+        transition: 0.5s;
+    }
+}

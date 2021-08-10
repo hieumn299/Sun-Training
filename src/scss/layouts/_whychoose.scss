@@ -1,0 +1,34 @@
+.why-choose {
+    .why-choose__item {
+        box-shadow: 1px 1px 5px 1px rgba(128, 128, 128, 0.322);
+        cursor: pointer;
+        &:hover {
+            background-color: $primary-color;
+        }
+        &:hover .item__number,
+        &:hover .item__title,
+        &:hover .item__des {
+            transform: translateY(-1.5rem);
+            transition: 0.5s;
+            color: white;
+        }
+        .item__number {
+            font-size: 2.8rem;
+            color: $primary-color;
+            font-weight: 700;
+            transition: 0.5s;
+        }
+        .item__title {
+            font-size: 2.4rem;
+            font-family: $secondary-font;
+            color: $secondary-color;
+            transition: 0.5s;
+        }
+        .item__des {
+            color: $third-color;
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+            transition: 0.5s;
+        }
+    }
+}
